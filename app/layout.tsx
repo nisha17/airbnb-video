@@ -12,7 +12,6 @@ import ToasterProvider from './providers/ToasterProvider';
 import getCurrentUser from './actions/getCurrentUser';
 
 
-
 export const metadata = {
   title: 'Airbnb',
   description: 'Airbnb clone',
@@ -21,7 +20,7 @@ export const metadata = {
 const font = Nunito({
   subsets: ["latin"], 
 });
-
+ 
 export default async function RootLayout({
   children,
 }: {
@@ -40,7 +39,11 @@ export default async function RootLayout({
             <RentModal />
             <Navbar currentUser={currentUser}/> 
         </ClientOnly>
-        {children}</body>
+        <div className="pb-20 pt-28">
+        {children}
+        </div>
+        
+        </body> 
     </html>
   )
 }
